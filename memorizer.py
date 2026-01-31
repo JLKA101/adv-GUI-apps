@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter.filedialog import *
 w = Tk()
 w.title("simple memorizer :)")
+w.config(bg="#B563A5")
 
 def openFile():
     fin = askopenfile(title="Open File")
@@ -34,15 +35,15 @@ def deleteItem():
     if index:
         listbox.delete(index)
 
-fOpen = Button(w, text="OPEN", command = openFile, width = 15)
-lDelete = Button(w, text="DELETE", command=deleteItem, width=15)
-fSave = Button(w, text="SAVE", command = saveFile, width=15)
+fOpen = Button(w, text="OPEN", command = openFile, width = 15, bg="#6D3C63", fg="white", activebackground="#5D3354")
+lDelete = Button(w, text="DELETE", command=deleteItem, width=15, bg="#6D3C63", fg="white", activebackground="#5D3354")
+fSave = Button(w, text="SAVE", command = saveFile, width=15, bg="#6A2C5D", fg="white", activebackground="#6A2C5D")
 
 fOpen.pack(side=LEFT, padx=5, pady=5)
 lDelete.pack(side=RIGHT, padx=5, pady=5)
 fSave.pack(padx=5, pady=5)
 
-lAdd = Button(w, text="ADD", command=addItem, width=15)
+lAdd = Button(w, text="ADD", command=addItem, width=15, bg="#6A2C5D", fg="white", activebackground="#6A2C5D")
 item = Entry(w, width=35)
 
 item.pack(padx=5, pady=5)
@@ -53,7 +54,7 @@ frame = Frame(w)
 scroll = Scrollbar(frame, orient="vertical")
 scroll.pack(side=RIGHT, fill=Y)
 
-listbox = Listbox(frame, width=70, yscrollcommand=scroll.set, bg="red")
+listbox = Listbox(frame, width=70, yscrollcommand=scroll.set, bg="#FAA7E9")
 
 for i in range(1, 101):
     listbox.insert(END, "LIST" + str(i))
