@@ -184,38 +184,38 @@ def b9Click():
         else:
             b9.configure(text = "O")
             turn = 1
-    lbl.configure(text="Player " + str(turn) + "'s Turn")
+    lbl.configure(text="Player " + str(turn) + "'s Turn", fg="#60A497")
     Win()
 
-b1 = Button(mainw, text="", width=5, command=b1Click)
+b1 = Button(mainw, text="", width=5, fg="black", bg="#B9FFEA", activebackground="#7FE7C8", command=b1Click)
 b1.grid(row=0, column=0, padx=5, pady=5)
 
-b2 = Button(mainw, text="", width=5, command=b2Click)
+b2 = Button(mainw, text="", width=5, fg="black", bg="#B9FFEA", activebackground="#7FE7C8", command=b2Click)
 b2.grid(row=0, column=1, padx=5, pady=5)
 
-b3 = Button(mainw, text="", width=5, command=b3Click)
+b3 = Button(mainw, text="", width=5, fg="black", bg="#B9FFEA", activebackground="#7FE7C8", command=b3Click)
 b3.grid(row=0, column=2, padx=5, pady=5)
 
-b4 = Button(mainw, text="", width=5, command=b4Click)
+b4 = Button(mainw, text="", width=5, fg="black", bg="#99F6DA", activebackground="#8CDEC5", command=b4Click)
 b4.grid(row=1, column=0, padx=5, pady=5)
 
-b5 = Button(mainw, text="", width=5, command=b5Click)
+b5 = Button(mainw, text="", width=5, fg="black", bg="#99F6DA", activebackground="#8CDEC5", command=b5Click)
 b5.grid(row=1, column=1, padx=5, pady=5)
 
-b6 = Button(mainw, text="", width=5, command=b6Click)
+b6 = Button(mainw, text="", width=5, fg="black", bg="#99F6DA", activebackground="#8CDEC5", command=b6Click)
 b6.grid(row=1, column=2, padx=5, pady=5)
 
-b7 = Button(mainw, text="", width=5, command=b7Click)
+b7 = Button(mainw, text="", width=5, fg="black", bg="#7BF1CE", activebackground="#71DBBB", command=b7Click)
 b7.grid(row=2, column=0, padx=5, pady=5)
 
-b8 = Button(mainw, text="", width=5, command=b8Click)
+b8 = Button(mainw, text="", width=5, fg="black", bg="#7BF1CE", activebackground="#71DBBB", command=b8Click)
 b8.grid(row=2, column=1, padx=5, pady=5)
 
-b9 = Button(mainw, text="", width=5, command=b9Click)
+b9 = Button(mainw, text="", width=5, fg="black", bg="#7BF1CE", activebackground="#71DBBB", command=b9Click)
 b9.grid(row=2, column=2, padx=5, pady=5)
 
 
-lbl = Label(mainw, text="Player" + str(turn) + "'s Turn")
+lbl = Label(mainw, text="Player" + str(turn) + "'s Turn", fg="#60A497")
 lbl.grid(row=3, column=1, padx=10, pady=10)
 
 mainw.mainloop()
