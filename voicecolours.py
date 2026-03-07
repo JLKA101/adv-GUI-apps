@@ -6,18 +6,32 @@ w = Tk()
 w.title("Voice Colours")
 w.geometry("500x200")
 
-lbl = Label(w, text="Say a color name (red, blue green, etc.)")
+lbl = Label(w, text="Say a color name (red, blue, green, etc.)")
 lbl.pack()
+
+colors = {
+    "red": "red",
+    "read": "red",
+    "blue": "blue",
+    "blew": "blue",
+    "green": "green",
+    "black": "black",
+    "yellow": "yellow",
+    "purple": "purple"
+}
 
 def Listen():
     r = sr.Recognizer()
     with sr.Microphone() as source:
         r.adjust_for_ambient_noise(source)
         audio = r.listen(source)
-        audio = r.listen(source)
         try:
-            text = r.recognize_google(audio)
-            w.config(bg=text)   
+            text = r.recognize_google(audio).lower()
+            print("You said:", text)
+            if text in colors:
+                w.config(bg=colors[text])  
+            else:
+                messagebox.showinfo("Error", "Colour not recognised")
         except:
             messagebox.showinfo("Voice not recognised", "Please try speaking a colour name again.")
 
